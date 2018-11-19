@@ -1,5 +1,5 @@
 <launch>
-  <!--
+
   <node pkg = "opu_dsb_rx"
         name = "sis_bias_vol_reader"
         type = "relay.py">
@@ -21,14 +21,14 @@
     <param name = "config_file"
            value = "$(find opu_dsb_rx)/relay_conf/sis_bias_vol_writer.conf" />
   </node>
-
+  <!--
   <node pkg = "opu_dsb_rx"
         name = "sis_bias_vol_locker"
         type = "relay.py">
     <param name = "config_file"
            value = "$(find opu_dsb_rx)/relay_conf/sis_bias_vol_locker.conf" />
   </node>
-
+  -->
   <node pkg = "opu_dsb_rx"
         name = "pm_power_reader"
         type = "relay.py">
@@ -37,19 +37,34 @@
   </node>
 
   <node pkg = "opu_dsb_rx"
-        name = "pm_ave_reader"
+        name = "pm_ave_count_reader"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_reader.conf" />
+           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_count_reader.conf" />
   </node>
 
   <node pkg = "opu_dsb_rx"
-        name = "pm_ave_cmd_writer"
+        name = "pm_ave_onoff_reader"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_cmd_writer.conf" />
+           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_onoff_reader.conf" />
   </node>
-  -->
+
+  <node pkg = "opu_dsb_rx"
+        name = "pm_ave_onoff_cmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_onoff_cmd_writer.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "pm_ave_count_cmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/pm_ave_count_cmd_writer.conf" />
+  </node>
+  
+
   <node pkg = "opu_dsb_rx"
         name = "chopper_jog_onoff_writer"
         type = "relay.py">
