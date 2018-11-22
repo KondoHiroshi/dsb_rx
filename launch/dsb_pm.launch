@@ -1,0 +1,39 @@
+<launch>
+    <node pkg = "dsb_rx"
+          name = "pm_power_reader"
+          type = "relay.py">
+      <param name = "config_file"
+             value = "$(find dsb_rx)/relay_conf/pm_power_reader.conf" />
+    </node>
+
+    <node pkg = "dsb_rx"
+          name = "pm_ave_count_reader"
+          type = "relay.py">
+      <param name = "config_file"
+             value = "$(find dsb_rx)/relay_conf/pm_ave_count_reader.conf" />
+    </node>
+
+    <node pkg = "dsb_rx"
+          name = "pm_ave_onoff_reader"
+          type = "relay.py">
+      <param name = "config_file"
+             value = "$(find dsb_rx)/relay_conf/pm_ave_onoff_reader.conf" />
+    </node>
+
+    <node pkg = "dsb_rx"
+          name = "pm_ave_onoff_cmd_writer"
+          type = "relay.py">
+      <param name = "config_file"
+             value = "$(find dsb_rx)/relay_conf/pm_ave_onoff_cmd_writer.conf" />
+    </node>
+
+    <node pkg = "dsb_rx"
+          name = "pm_ave_count_cmd_writer"
+          type = "relay.py">
+      <param name = "config_file"
+             value = "$(find dsb_rx)/relay_conf/pm_ave_count_cmd_writer.conf" />
+    </node>
+
+
+
+</launch>
