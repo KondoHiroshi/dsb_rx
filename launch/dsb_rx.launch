@@ -134,7 +134,7 @@
     <param name="~diffch_list" value="[1, 2, 3, 4]" />
   </node>
 
-  <node pkg="rx_device_driver" name="ml2437a" type="ml2437a_ros.py" required="true" output="screen">
+  <node pkg="rx_device_driver" name="ml2437a" type="ml2437a_ros2.py" required="true" output="screen">
     <param name="~host" value="192.168.100.44" />
     <param name="~port" value="13" />
     <param name="~rate" value="0.001" />
