@@ -135,7 +135,7 @@
     <param name="~pm_ch" value="10" />
   </node>
 
-  <node pkg="rx_device_driver" name="ml2437a" type="ml2437a_gpib.py" required="true" output="screen">
+  <node pkg="dsb_rx" name="ml2437a" type="ml2437a_gpib.py" required="true" output="screen">
     <param name="~host" value="192.168.100.44" />
     <param name="~port" value="13" />
   </node>
