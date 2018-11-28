@@ -80,7 +80,7 @@ class ml2437a_controller(object):
 
 class ml2437a_driver(object):
 
-    def __init__(self, IP, GPIB, ch=1, resolution=3):
+    def __init__(self, IP=IP, GPIB=GPIB, ch=1, resolution=3):
         self.IP = IP
         self.GPIB = GPIB
         self.com = pymeasure.gpib_prologix(self.IP, self.GPIB)
