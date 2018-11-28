@@ -80,7 +80,7 @@ class ml2437a_controller(object):
 
 class ml2437a_driver(object):
 
-    def __init__(self, IP='192.168.100.44', GPIB=13, ch=1, resolution=3):
+    def __init__(self, IP, GPIB, ch=1, resolution=3):
         self.IP = IP
         self.GPIB = GPIB
         self.com = pymeasure.gpib_prologix(self.IP, self.GPIB)
@@ -219,9 +219,11 @@ class ml2437a_driver(object):
 
 if __name__ == "__main__" :
     rospy.init_node("ml2437a")
+    GPIB = rospy.get_param('~port')
+    IP = rospy.get_param('~host')
     ctrl = ml2437a_controller()
     ctrl.start_thread()
     rospy.spin()
 
 #2018/11/01
-#written by H.kondo
+#written by H.Kondo
