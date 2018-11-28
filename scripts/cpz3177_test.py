@@ -42,7 +42,7 @@ if __name__ == '__main__':
     topic_list = select_singlediff()
     pub_list = [rospy.Publisher('{0}_rsw{1}_{2}{3}'.format(node_name, rsw_id, mode, ch), Float64, queue_size=1)
                        for ch, mode in topic_list]
-    pm_ch = 10
+    pm_ch = "10"
     pub_pm = rospy.Publisher('{0}_rsw{1}_diff{2}'.format(node_name, rsw_id, pm_ch))
 
     try:
