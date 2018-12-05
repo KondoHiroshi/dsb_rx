@@ -31,6 +31,7 @@ def select_singlediff():
     return ret
 
 
+
 if __name__ == '__main__':
     ch_number = {'single': 64, 'diff': 32}
 
@@ -45,6 +46,8 @@ if __name__ == '__main__':
                        for ch, mode in topic_list]
 
     pub_pm = rospy.Publisher('{0}_rsw{1}_diff{2}'.format(node_name, rsw_id, pm_ch),Float64, queue_size=1)
+
+    pm_ch=12
 
     try:
         ad = pyinterface.open(3177, rsw_id)
