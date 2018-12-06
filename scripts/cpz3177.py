@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     pub_pm = rospy.Publisher('{0}_rsw{1}_diff{2}'.format(node_name, rsw_id, pm_ch),Float64, queue_size=1)
 
-    pm_ch=12
+    pm_ch=10
 
     try:
         ad = pyinterface.open(3177, rsw_id)
