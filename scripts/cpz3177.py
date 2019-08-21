@@ -75,5 +75,4 @@ while not rospy.is_shutdown():
     continue
 
 #20181129
-#change for opu_dsb
-#wriiten by Kondo
+#change for opu_dsb by kondo
