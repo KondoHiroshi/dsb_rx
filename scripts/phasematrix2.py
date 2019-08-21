@@ -4,10 +4,8 @@ import os
 
 class FSW0000(object):
 
-    def __init__(self):
+    def __init__(self,port):
 
-        self.search_usb_port()
-        port = self.port
         self.ser = serial.Serial(port)
 
     def query(self,cmd):
